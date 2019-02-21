@@ -460,9 +460,16 @@ a {
 
 .product-card {
     margin-bottom: 20px;
-    width: 220px;
+    width: 218px;
     position: relative;
     border: 1px solid #eaeaea;
+    position: relative;
+    display: inline-block;
+    width: 218px;
+    border: 1px solid #ccc;
+    line-height: 20px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .product-card h4 {
@@ -471,7 +478,7 @@ a {
     font-weight: bold;
     line-height: 20px;
     padding-left: 30px;
-    padding-right: 30px;
+    padding-right: 20px;
     text-align: center;
     margin: 0;
 }
@@ -486,16 +493,7 @@ a {
     margin: 0;
     padding-top: 11px;
     padding-bottom: 13px;
-}
-
-.btn-card::before {
-    content: "";
-    background-image: url(../img/btn-copy-14.svg);
-    position: absolute;
-    width: 141px;
-    height: 38px;
-    left: 43px;
-    bottom: 21px;
+    text-decoration:line-through;
 }
 
 .manufacturer-card {
@@ -503,12 +501,140 @@ a {
     width: 220px;
     height: 145px;
     margin-bottom: 20px;
+    display:flex;
+  	align-items: center;
+  	justify-content: center;
 }
 
+.product-card .btn-card {
+	position:relative;
+    width:80px;
+    margin:10px auto;
+    margin-bottom:20px;
+    padding:10px 30px;
+    color:white;
+    background:#ee3643;
+    border-radius:3px;
+}
 
+.product-card-new::before {
+	content: "";
+	background-image: url(../img/new-flag.png);
+	position: absolute;
+    width: 60px;
+    height: 59px;
+    right: 0;
+    z-index: 200;
+}
 
+.product-card .btn-card::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: -20px;
+	width: 0;
+	height: 0;
+	border: 20px solid white;
+	border-left-color: #ee3643;
+}
 
+.product-card .btn-card-new {
+	margin-top: 52px;
+}
+
+.product-card .actions {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 218px;
+	height: 88px;
+	padding: 40px 0;
+	background-color:rgba(255,255,255,0.9);
+    z-index:10;
+}
+
+.product-card .buy,
+.product-card .bookmark {
+	display: block;
+	width: 129px;
+	margin: 0 auto;
+	margin-bottom:7px;
+    padding:7px 0;
+    border:3px solid #63a63e;
+    border-bottom-color:#367315; 
+    background-color:#63a63e;
+    color:white;
+    font-size:14px;
+    font-weight:normal;
+    font-family:"Cuprum", sans-serif;
+    line-height:18px;
+    text-decoration:none;
+    text-transform:uppercase;    
+    border-radius:3px;
+}
+
+.product-card .actions .bookmark {
+	color:#32425c;
+    background:white;
+    border-bottom-color:#63a63e;
+}
+
+.product-card .actions {
+	display: none;
+}
+
+.product-card:hover .actions {
+	display: block;
+}
+
+.services-info {
+	display: inline-block;
+    margin-top: 68px;
+    margin-bottom: 74px;
+    width: 407px;
+}
+
+.services-info h3 {
+	font-family: "Cuprum";
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.services-info p {
+	font-family: "PTSans";
+	font-size: 13px;
+	line-height: 24px;
+	margin: 0;
+}
 
 .services {
     margin-top: 65px;
 }
+
+.services-slider {
+	display: flex;
+	justify-content: space-between;
+}
+
+.services-slider-btn button {
+	border: none;
+    background-color: unset;
+}
+
+.services-slider-btn button:active {
+    background-color: #ffffff;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 21px;
+    width: 240px;
+    text-align: left;
+    font-family: Cuprum;
+    font-size: 21px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.43;
+}
+
