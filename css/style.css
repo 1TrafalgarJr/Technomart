@@ -330,6 +330,7 @@ a {
 .section-information-green {
     background-color: #8ed78f;
     display: inline-table;
+    margin-left: 400px;
 }
 
 .section-information-green p {
@@ -358,7 +359,6 @@ a {
 
 .section-information-yellow {
     margin-left: auto;
-    margin-top: -125px;
 }
 
 .section-information-yellow p {
@@ -421,6 +421,7 @@ a {
     top: 114px;
     left: 20px;
 }
+
 
 .popular-product, .popular-manufacturer {
     display: flex;
@@ -638,3 +639,24 @@ a {
     line-height: 1.43;
 }
 
+
+
+
+
+
+
+
+
+.sliderr {
+    position: relative;
+}
+
+.slide {
+    position:absolute;
+    top: 0;
+    left: 0;
+}
+
+.sliderr .slide:target {
+    z-index: 100;
+}
